@@ -1,44 +1,35 @@
 class account:
+     """ This is an account class to compute several bank tasks """
      
-    def __init__ (self, name):
-        
-        self.__account_name=name   #private data variables initialising using double underscore __
-        self.__account_balance=0
+    def __init__ (self, name):  
+        """ Sets object of the class """
+        self.__account_name = name  
+        self.__account_balance = 0
 
     
     def deposit(self, amount):
-                
-        if amount>0:  #amount checking
-            
-            self.__account_balance=self.__account_balance+amount 
-            
+        """ Adds amount to account balance or returns False """       
+        if amount > 0:  
+            self.__account_balance = self.__account_balance + amount 
             return True
-        
-        else:
-            
+        else:   
             return False
             
     def withdraw(self, amount):
-
-        if amount>0: #amount checking
-            
-            if amount<=self.__account_balance:  #limit checking
-                
-                self.__account_balance=self.__account_balance-amount  #updating bank balance- amount reduction
-                
+        """ Subtracts amount from account balance or returns False """
+        if amount > 0: 
+            if amount <= self.__account_balance: 
+                self.__account_balance = self.__account_balance-amount  
                 return True
-            
-            else:
-                
+            else:    
                 return False
-        else:
-            
+        else:   
             return False
         
     def getbalance(self):
-    
-        return self.__account_balance  #returning balance
+        """ use methods to return account balance via account_balance variable """
+        return self.__account_balance 
         
-    def getname(self):
-        
-        return self.__account_name   #returning name
+    def getname(self): 
+        """ returns account name via account_name variable """
+        return self.__account_name   
