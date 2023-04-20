@@ -1,15 +1,26 @@
 import pytest
 from account import account
 
-def test_init():
-  acc = account("Kareem")
-  assert acc.getname() == "Kareem"
-  assert acc.getbalance() == 0
-  
-def test_deposit():
-  acc = account("Kareem")
-  assert acc.deposit() == 100
-  assert acc.getbalance() == 100
-  
-def test_withdraw():
-  
+class Test:
+
+    def test_init(self):
+        self.acc = account("Kareem")
+        assert self.acc.getname() == "Kareem"
+        assert self.acc.getbalance() == 0
+
+    def test_deposit(self):
+        self.acc = account("Kareem")
+        assert self.acc.deposit(50)
+        assert self.acc.getbalance() == 50
+        assert self.acc.deposit(-50) == False
+        assert self.acc.getbalance() == 50
+
+
+    def test_withdraw(self):
+        self.acc = account("Kareem")
+        assert self.acc.deposit(50)
+        assert self.acc.withdraw(50)
+        assert self.acc.getbalance() == 0
+
+
+
