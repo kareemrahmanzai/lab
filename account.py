@@ -10,7 +10,7 @@ class account:
         self.__account_balance = 0
 
 
-    def deposit(self, amount):
+    def deposit(self, amount) -> float:
         """ Adds amount to account balance or returns False
         """
         if amount > 0:
@@ -20,7 +20,7 @@ class account:
             return False
 
 
-    def withdraw(self, amount):
+    def withdraw(self, amount) -> float:
         """ Subtracts amount from account balance or returns False
         """
         if amount > 0:
