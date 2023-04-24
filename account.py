@@ -10,7 +10,7 @@ class account:
         self.__account_balance = 0
 
 
-    def deposit(self, amount) -> float:
+    def deposit(self, amount):
         """ Adds amount to account balance or returns False
         """
         if amount > 0:
@@ -20,7 +20,7 @@ class account:
             return False
 
 
-    def withdraw(self, amount) -> float:
+    def withdraw(self, amount):
         """ Subtracts amount from account balance or returns False
         """
         if amount > 0:
@@ -33,13 +33,13 @@ class account:
             return False
 
 
-    def getbalance(self) -> str:
+    def get_balance(self) -> str:
         """ use methods to return account balance via account_balance private variable
         """
         return self.__account_balance
 
 
-    def getname(self) -> str:
+    def get_name(self) -> str:
         """ returns account name via account_name private variable
         """
         return self.__account_name
